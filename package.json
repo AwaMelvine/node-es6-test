@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "mocha --require babel-core/register ./test/**/*.js",
+    "test": "cross-env NODE_ENV=test mocha --require babel-core/register ./test/**/*.js",
     "clean": "rm -rf build && mkdir build",
     "build-babel": "babel ./api -d ./build -s",
     "build": "npm run clean && npm run build-babel",
@@ -24,6 +24,7 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
+    "cross-env": "^5.2.0",
     "eslint": "^5.5.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0"
