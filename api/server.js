@@ -1,6 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import orders from './api/v1/routes/orders';
+import orders from './v1/routes/orders';
 
 const app = express();
 
