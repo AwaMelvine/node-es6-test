@@ -4,8 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "test": "mocha --require babel-core/register ./test/**/*.js",
     "clean": "rm -rf build && mkdir build",
-    "build-babel": "babel -d ./build ./api -s",
+    "build-babel": "babel ./api -d ./build -s",
     "build": "npm run clean && npm run build-babel",
     "start": "npm run build && node ./build/server.js"
   },
